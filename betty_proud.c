@@ -6,5 +6,6 @@
   */
 int main(void)
 {
+	write(1, "Code that passes betty tests.\n", 30);
 	return (0);
 }
