@@ -22,7 +22,12 @@ int main(__attribute__((unused))int ac, char **av)
   return (0);
 }
 /**
-  *
+  * _parse - parse commands and line of code
+  * passed by the user
+  * @line: ptr to str
+  * @n: size_t
+  * @count: num of commands entered
+  * @av: program name
   */
 void _parse(char *line, size_t n, int count, char **av)
 {
