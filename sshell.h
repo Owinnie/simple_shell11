@@ -10,10 +10,15 @@
 #include <stdarg.h>
 #include <signal.h>
 #define PROMPT "Owinnie@root $ "
+/**
+  * struct built_inside - for builtins
+  * @built: name of command
+  * @func: ptr to builtin
+  */
 typedef struct built_inside
 {
-  char *built;
-  void (*func)(char);
+	char *built;
+	void (*func)(char);
 } blt;
 extern char **environ;
 int _strlen(char *str);
