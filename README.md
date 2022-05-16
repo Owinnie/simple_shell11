@@ -36,5 +36,5 @@
 
 
 # Note from author(s)
----> This a very <em>VERY</em> simple version of shell. Improve it and make it better 
+---> This a very <b><em>VERY</em></b> simple version of shell. Improve it and make it better 
                    Happy coding :) !!!
