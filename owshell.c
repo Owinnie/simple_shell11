@@ -43,7 +43,7 @@ void _parse(char *line, size_t n, int count, char **av)
 		s_array = strtok_array(line, delim, tkn_count);
 		if (s_array[0] == NULL)
 		{
-			_free(2, s_arrray, line);
+			s_free(2, s_array, line);
 			return;
 		}
 		i = built_ins(s_array, line);
@@ -51,8 +51,8 @@ void _parse(char *line, size_t n, int count, char **av)
 			fork_a_child(s_array, line, count, av);
 		for (i = 0; s_array[i] != NULL; i++)
 			free(s_array[i]);
-		_free(2, s_array, line);
+		s_free(2, s_array, line);
 	}
 	else
-		_exit_(line);
+		exit_s(line);
 }

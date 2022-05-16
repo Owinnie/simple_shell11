@@ -18,7 +18,7 @@ void fork_a_child(char **s_array, char *line, int count, char **av)
 	if (id == 0)
 	{
 		temp_cmd = s_array[0];
-		cmd = path_find(s_arrray[0]);
+		cmd = path_find(s_array[0]);
 		if (cmd == NULL)
 		{
 			c = stat(temp_cmd, &buf);
@@ -26,6 +26,7 @@ void fork_a_child(char **s_array, char *line, int count, char **av)
 			{
 				print_err(av[0], count, temp_cmd);
 				write(1, ": doesn't exist\n", _strlen(": doesn't exist\n"));
+				s_free(2, line, temp_cmd);
 				for (i = 1; s_array[i]; i++)
 					free(s_array[i]);
 				free(s_array);

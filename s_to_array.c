@@ -15,7 +15,7 @@ char **strtok_array(char *line, const char *delim, int tkn_count)
 
 	s = _strdup(line);
 	if (s == NULL)
-		return (-1);
+		return (NULL);
 	tkn = strtok(s, delim);
 	for (tkn_count = 0; tkn != NULL; tkn_count++)
 		tkn = strtok(NULL, delim);

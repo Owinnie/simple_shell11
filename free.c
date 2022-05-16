@@ -1,9 +1,9 @@
 #include "sshell.h"
 /**
-  * _free_ - free ptrs
+  * d_free - free ptrs
   * @freed: ptrs to be freed
   */
-void _free_(char **freed)
+void d_free(char **freed)
 {
 	int i;
 
@@ -12,10 +12,10 @@ void _free_(char **freed)
 	free(freed);
 }
 /**
-  * _free - free ptrs to strs
+  * s_free - free ptrs to strs
   * @n: num of ptrs to free
   */
-void _free(int n, ...)
+void s_free(int n, ...)
 {
 	int i;
 	char *str;

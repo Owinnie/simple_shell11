@@ -10,7 +10,7 @@ int find_path(char *s)
 	int i, j, ln;
 
 	ln = _strlen(s);
-	for (i = 0; eviron[i] != NULL; i++)
+	for (i = 0; environ[i] != NULL; i++)
 	{
 		for (j = 0; j < ln; j++)
 		{
@@ -43,16 +43,16 @@ char *path_find(char *cmd)
 	dir = search_dir(path_tkns, cmd);
 	if (dir == NULL)
 	{
-		_free_(path_tkns);
+		d_free(path_tkns);
 		return (NULL);
 	}
 	path = build_path(dir, cmd);
 	if (path == NULL)
 	{
-		_free_(path_tkns);
+		d_free(path_tkns);
 		return (NULL);
 	}
-	_free_(path_tkns);
+	d_free(path_tkns);
 	return (path);
 }
 /**
@@ -104,6 +104,7 @@ char *search_dir(char **path_tkns, char *cmd)
 			perror("Error!");
 			return (NULL);
 		}
+		s = stat(cmd, &s_buf);
 		if (s == 0)
 		{
 			chdir(wdir);

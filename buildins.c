@@ -1,4 +1,4 @@
-#include "sshell.c"
+#include "sshell.h"
 /**
   * built_ins - check for buitins
   * @a_rray: list of args passed
@@ -14,7 +14,7 @@ int built_ins(char **a_rray, char *line)
 	if (built == NULL)
 		return (-1);
 	if (_strcmp("exit", a_rray[0]) == 0)
-		_free_(a_rray);
+		d_free(a_rray);
 	built(line);
 	return (0);
 }
@@ -28,9 +28,9 @@ void (*list_built_ins(char *str))(char *str)
 	int i;
 
 	blt builD[] = {
-		{"exit", _exit_},
-		{"env", _env},
-		{"cd", _cd},
+		{"exit", exit_s},
+		{"env", env_s},
+		{"cd", cd_s},
 		{NULL, NULL}
 	};
 	for (i = 0; builD[i].built != NULL; i++)
@@ -43,20 +43,20 @@ void (*list_built_ins(char *str))(char *str)
 	return (NULL);
 }
 /**
-  * _exit_ - exit owshell
+  * exit_s - exit owshell
   * @line: free line before exiting
   */
-void _exit_(char *line)
+void exit_s(char *line)
 {
 	free(line);
 	write(1, "\n", 1);
 	exit(1);
 }
 /**
-  * _env - print environment vars
+  * env_s - print environment vars
   * @line: user_input
   */
-void _env(__attribute__((unused))char *line)
+void env_s(__attribute__((unused))char *line)
 {
 	int i, j;
 
@@ -71,7 +71,7 @@ void _env(__attribute__((unused))char *line)
   * _cd - change dir
   * @line: user input
   */
-void _cd(char *line)
+void cd_s(char *line)
 {
 	int i, tkn_count = 0;
 	char **s_array;
@@ -80,7 +80,7 @@ void _cd(char *line)
 	s_array = strtok_array(line, delim, tkn_count);
 	if (s_array[0] == NULL)
 	{
-		_free(2, s_array, line);
+		s_free(2, s_array, line);
 		return;
 	}
 	if (s_array[1] == NULL)
@@ -95,5 +95,5 @@ void _cd(char *line)
 	}
 	else
 		chdir(s_array[1]);
-	_free_(s_array);
+	d_free(s_array);
 }

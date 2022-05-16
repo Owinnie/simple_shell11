@@ -54,9 +54,9 @@ int print_num(int n)
 	{
 		div *= 10;
 	}
-	for (div; div != 0; div++)
+	for (; div != 0; )
 	{
-		ln += write(1, '0' + num / div, 1);
+		ln += _write_char('0' + num / div);
 		num %= div;
 		div /= 10;
 	}
@@ -77,4 +77,13 @@ int _strlen(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 		;
 	return (i);
+}
+/**
+  * _write_char - Writes a character to stdout
+  * @c: Character that will be written to stdout
+  * Return: Upon success how many characters were written.
+  */
+int _write_char(char c)
+{
+	return (write(1, &c, 1));
 }
