@@ -16,6 +16,7 @@ typedef struct built_inside
   void (*func)(char);
 } blt;
 extern char **environ;
+int _strlen(char *str);
 void _parse(char *line, size_t n, int count, char **av);
 char **strtok_array(char *line, const char *delim, int tkn_count);
 char *_strdup(char *src);
