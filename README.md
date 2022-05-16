@@ -1,54 +1,37 @@
-0x16. C - Simple Shell
+# 0x16. C - Simple Shell ==> OwShell
 
-UNIX Command Line Intepreter
-Display a prompt and wait for the user to type a command. A command line always ends with a new line.
+## UNIX Command Line Intepreter
+- Displays a prompt and waits for the user to type a command --> $
+- The prompt is displayed again each time a command has been executed.
+- Handles basic commands eg, pwd, ls, cd, exit...
+- Displays err messages in case of err
 
-The prompt is displayed again each time a command has been executed.
+## Functions used are included in the following files
+  # Buildins
+  # Errors
+  # Fork a child
+  # Free
+  # Paths
+  # String to array
+  # String methods
 
-The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
+# HOW TO START OwShell
+1. First compile:
+      gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
-The command lines are made only of one word. No arguments will be passed to programs.
-
-If an executable cannot be found, print an error message and display the prompt again.
-
-Handle errors.
-
-You have to handle the “end of file” condition (Ctrl+D)
-
-Simple shell 0.1 +
-
-
-
-Handle command lines with arguments
-
-Simple shell 0.2 +
-
-
-
-Handle the PATH
-
-fork must not be called if the command doesn’t exist
-
-Simple shell 0.3 +
-
-
-
-Implement the exit built-in, that exits the shell
-
-Usage: exit
-
-Simple shell 0.4 +
+2. Run: ./hsh
+      Owinnie@root $ 
+      
+      ----> It's ready for your input; start typing. Don't get too excited albeit. Some advanced
+            shell commands might not work. Experiment and make them work...
+            
+3. Had enough fun? Exit:
+      Owinnie@root $ exit
+      
+      
+      ## BYE ..........................................................................................................................................................................................
 
 
-
-Implement the env built-in, that prints the current environment
-
-Simple shell 0.1 +
-
-
-
-Write your own getline function
-
-Use a buffer to read many chars at once and call the least possible the read system call
-
-You will need to use static variables
+# Note from author(s)
+---> This a very <em>VERY</em> simple version of shell. Improve it and make it better 
+                   Happy coding :) !!!
