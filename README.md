@@ -7,26 +7,29 @@
 - Displays err messages in case of err
 
 ## Functions used are included in the following files
-  # Buildins
-  # Errors
-  # Fork a child
-  # Free
-  # Paths
-  # String to array
-  # String methods
+  ## Buildins
+  ## Errors
+  ## Fork a child
+  ## Free
+  ## Paths
+  ## String to array
+  ## String methods
 
-# HOW TO START OwShell
+### HOW TO START OwShell
 1. First compile:
-      gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+      ## gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 2. Run: ./hsh
-      Owinnie@root $ 
+
+      ## Owinnie@root $ 
       
       ----> It's ready for your input; start typing. Don't get too excited albeit. Some advanced
             shell commands might not work. Experiment and make them work...
             
 3. Had enough fun? Exit:
-      Owinnie@root $ exit
+
+      ## Owinnie@root $ exit
       
       
       ## BYE ..........................................................................................................................................................................................
