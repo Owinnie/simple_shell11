@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include "sshell.h"
+/**
+  * _getline - mimic getline
+  * @lineptr: buf
+  * @n: size of buf
+  * @stream: read from
+  *
+  * Return: ssize_t
+  */
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 {
 	if (lineptr == NULL || n == NULL)
@@ -45,7 +53,10 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 	}
 	return (-1);
 }
-
+/**
+  * main - use getline
+  * Return: 0
+  */
 int main(void)
 {
 	ssize_t get_l;
