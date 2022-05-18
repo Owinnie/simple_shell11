@@ -22,19 +22,19 @@
 
 2. Run: ./hsh
 
-      ## Owinnie@root $ 
-      
+      ## Owinnie@root $
+
       ----> It's ready for your input; start typing. Don't get too excited albeit. Some advanced
             shell commands might not work. Experiment and make them work...
-            
+
 3. Had enough fun? Exit:
 
       ## Owinnie@root $ exit
-      
-      
+
+
       ## BYE ..........................................................................................................................................................................................
 
 
 # Note from author(s)
----> This a very <b><em>VERY</em></b> simple version of shell. Improve it and make it better 
+---> This a very <b><em>VERY</em></b> simple version of shell. Improve it and make it better
                    Happy coding :) !!!

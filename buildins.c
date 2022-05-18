@@ -68,7 +68,7 @@ void env_s(__attribute__((unused))char *line)
 	}
 }
 /**
-  * _cd - change dir
+  * cd_s - change dir
   * @line: user input
   */
 void cd_s(char *line)

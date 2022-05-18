@@ -56,7 +56,7 @@ char *path_find(char *cmd)
 	return (path);
 }
 /**
-  * sub_path - break strs
+  * sub_paths - break strs
   * @i: index of path
   * @s: str to be separated
   *
