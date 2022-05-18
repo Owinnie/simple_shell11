@@ -10,7 +10,7 @@
 #include <stdarg.h>
 #include <signal.h>
 #include <string.h>
-#define PROMPT "Owinnie@root $ "
+#define PROMPT "Owinnie@root$"
 /**
   * struct built_inside - for builtins
   * @built: name of command
