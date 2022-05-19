@@ -1,12 +1,4 @@
 #include "sshell.h"
-char *b_str[] = {
-	"cd",
-	"exit"
-};
-int (*b_func[])(char **) = {
-	&c_d,
-	&ex_it
-};
 /**
   * execute - execute commands
   * @args: cmdline to execute
@@ -15,6 +7,14 @@ int (*b_func[])(char **) = {
 int execute(char **args)
 {
 	int i;
+	char *b_str[] = {
+		"cd",
+		"exit"
+	};
+	int (*b_func[])(char **) = {
+		&c_d,
+		&ex_it
+	};
 
 	if (args[0] == NULL)
 		return (1);
@@ -31,6 +31,11 @@ int execute(char **args)
   */
 int builtins(void)
 {
+	char *b_str[] = {
+		"cd",
+		"exit"
+	};
+
 	return (sizeof(b_str) / sizeof(char *));
 }
 /**
