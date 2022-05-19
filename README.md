@@ -6,14 +6,7 @@
 - Handles basic commands eg, pwd, ls, cd, exit...
 - Displays err messages in case of err
 
-## Functions used are included in the following files
-  ## Buildins
-  ## Errors
-  ## Fork a child
-  ## Free
-  ## Paths
-  ## String to array
-  ## String methods
+
 
 ### HOW TO START OwShell
 1. First compile:
